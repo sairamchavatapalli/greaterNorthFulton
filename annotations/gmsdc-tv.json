@@ -1,0 +1,27 @@
+{
+    "data": [
+      {"inputs":{"utterance":"Georgia Mentor Protege Connection"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"georgiaMentorProtegeConnection","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"Georgia Minority Supplier Development Council"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"georgiaMinoritySupplierDevelopmentCouncil","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"How to Do Business with Atlanta Beltline"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"businessWithAtlantaBeltline","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"How to Do Business with Emory University"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"businessWithEmoryUniversity","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"How to Do Business with Fulton County"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"businesswithFultonCounty","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"How to Do Business with Southern Company"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"businessWithSouthernCompany","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"How to Do Business with Truist"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"businessWithTruist","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"How to Do Business with UPS"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"businessWithUps","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"Opportunity Reimagined"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"opportunityReimagined","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"VirtualIPC1"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"virtualIpc1","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"2019 BOE Accenture"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"boeAccenture","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"2019 Spirit of Alliance Awards Nominations"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"spiritOfAllianceAwardsNominations","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"Chairman's Night of Giving 2019"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"chairmansNightofGiving","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"GMSDC Diamond and Denim Fashion Show"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"diamondAndDenimFashionShow","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"GMSDC State of the Council"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"stateOfTheCouncil","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"Resource Series Now corporation"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"resourceSeriesNowCorporation","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"LTSB Crystal King"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"ltsbCrystalKing","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"LTSB Tracey Grace"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"ltsbTraceyGrace","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"LTSB Valerie Nesbitt"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"ltsbValerieNesbitt","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"LTSB with Angela Williams"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"ltsbWithAngelaWilliams","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"LTSB with Chondra Webster Meyers"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"ltsbWithChondraWebsterMeyers","type":"Simple"}}}}}]},
+      {"inputs":{"utterance":"LTSB with Calvin McCoy"},"expected":[{"intent":{"name":"GmsdcTvIntent","slots":{"video":{"slotValue":{"value":"ltsbWithCalvinMcCoy","type":"Simple"}}}}}]}
+    ]
+    
+}

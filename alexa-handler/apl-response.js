@@ -1,0 +1,130 @@
+const listTemplate = require('./templates/list-template.json');
+const pageTemplate = require('./templates/page-template.json');
+const textTemplate = require('./templates/text-template.json');
+const bodyTemplate = require('./templates/body-template.json');
+const listImgHorTemplate = require('./templates/list-img-horizontal.json')
+const gridTemplate = require('./templates/grid-template.json');
+const videoTemplate = require('./templates/video-template.json');
+
+const { generatePageDs } = require('./data-sources/page-temp-ds');
+const { generateTextDs } = require('./data-sources/text-temp-ds');
+const { generateBodyDs } = require('./data-sources/body-temp-ds');
+const { generateListDs } = require('./data-sources/list-temp-ds');
+const { generateListImgHoriDs } = require('./data-sources/list-img-hor-temp-ds');
+const { generateGridDs } = require('./data-sources/grid-temp-ds');
+const { generateVideoDs } = require('./data-sources/video-temp-ds');
+
+const buildPageRes = (responseBuilder, data, token = "launchToken") => {
+    responseBuilder.addDirective({
+        type: 'Alexa.Presentation.APL.RenderDocument',
+        version: '1.0',
+        token: token,
+        document: pageTemplate,
+        datasources: generatePageDs(data)
+    })
+}
+
+const buildTextRes = (responseBuilder, data, token = "launchToken") => {
+    responseBuilder.addDirective({
+        type: 'Alexa.Presentation.APL.RenderDocument',
+        version: '1.0',
+        token: token,
+        document: textTemplate,
+        datasources: generateTextDs(data)
+    }).addDirective({
+        type: 'Alexa.Presentation.APL.ExecuteCommands',
+        token: token,
+        commands: [
+            {
+                type: 'SpeakItem',
+                componentId: 'Narrative',
+                highlightMode: 'line',
+                align: 'last'
+            }
+        ]
+    })
+}
+
+const buildListImgHorRes = (responseBuilder, data, token = "listImg") => {
+    responseBuilder.addDirective({
+        type: 'Alexa.Presentation.APL.RenderDocument',
+        version: '1.6',
+        token: token,
+        document: listImgHorTemplate,
+        datasources: generateListImgHoriDs(data)
+    })
+}
+
+
+const buildListRes = (responseBuilder, data, token = "launchToken") => {
+    responseBuilder.addDirective({
+        type: 'Alexa.Presentation.APL.RenderDocument',
+        version: '1.0',
+        token: token,
+        document: listTemplate,
+        datasources: generateListDs(data)
+    }).addDirective({
+        type: 'Alexa.Presentation.APL.ExecuteCommands',
+        token: token,
+        commands: [
+            {
+                "type": "SpeakItem",
+                "componentId": "listTitleId",
+                "highlightMode": "line"
+            },
+            {
+                "type": "SpeakList",
+                "componentId": "speakableSequence",
+                "align": "center",
+                "count": "${payload.listTemplate1ListData.properties.count}",
+                "start": 0
+            }
+        ]
+    })
+}
+
+const buildBodyRes = (responseBuilder, data, token = "launchToken") => {
+    responseBuilder.addDirective({
+        type: 'Alexa.Presentation.APL.RenderDocument',
+        version: '1.0',
+        token: token,
+        document: bodyTemplate,
+        datasources: generateBodyDs(data)
+    }).addDirective({
+        type: 'Alexa.Presentation.APL.ExecuteCommands',
+        token: token,
+        commands: [
+            {
+                type: 'SpeakItem',
+                componentId: 'Narrative',
+                highlightMode: 'line',
+                align: 'last'
+            }
+        ]
+    })
+}
+
+const buildGridRes = (responseBuilder, data, token = "launchToken") => {
+    responseBuilder.addDirective({
+        type: 'Alexa.Presentation.APL.RenderDocument',
+        version: '1.0',
+        token: token,
+        document: gridTemplate,
+        datasources: generateGridDs(data)
+    })
+}
+
+const buildVideoRes = (responseBuilder, data, token = "videoplayer") => {
+    responseBuilder.addDirective({
+        type: 'Alexa.Presentation.APL.RenderDocument',
+        version: '1.6',
+        token: token,
+        document: videoTemplate,
+        datasources: generateVideoDs(data)
+    })
+}
+
+
+module.exports = {
+    buildBodyRes, buildListRes, buildPageRes, buildTextRes, buildGridRes, buildVideoRes, buildListImgHorRes
+}

@@ -1,0 +1,26 @@
+{
+  "name": "gmsdc",
+  "version": "1.0.0",
+  "description": "Alexa skill for hindu temple of atlanta",
+  "main": "app.js",
+  "dependencies": {
+    "ask-sdk-core": "^2.10.2",
+    "ask-sdk-express-adapter": "^2.10.2",
+    "ask-sdk-model": "^1.35.1",
+    "aws-sdk": "^2.919.0",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "i18next": "^20.3.1",
+    "moment-timezone": "^0.5.34"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --inspect app.js"
+  },
+  "author": "sairam ch",
+  "license": "ISC"
+}

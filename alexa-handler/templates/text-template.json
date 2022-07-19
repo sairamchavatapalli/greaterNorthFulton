@@ -1,0 +1,128 @@
+{
+    "type": "APL",
+    "version": "1.1",
+    "settings": {},
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.3.0"
+        }
+    ],
+    "resources": [],
+    "styles": {
+        "karaokeText": {
+            "values": [
+              {
+                "color": "#fafafa",
+                "fontWeight": 300
+              },
+              {
+                "when": "${state.karaoke}",
+                "color": "white",
+                "fontWeight": 700
+              },
+              {
+                "when": "${state.karaokeTarget}",
+                "color": "#ADD8E6",
+                "fontWeight": 100
+              }
+            ]
+        }
+    },
+    "onMount": [],
+    "graphics": {},
+    "commands": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "width": "100vw",
+                "height": "100vh",
+                "items": [
+                    {
+                        "type": "AlexaBackground",
+                        "colorOverlay": true,
+                        "backgroundImageSource": "${payload.normalText.bgImg}"
+                    },
+                    {
+                        "type": "AlexaHeader",
+                        "headerAttributionImage": "${payload.normalText.logoUrl}",
+                        "headerTitle": "${payload.normalText.title}",
+                        "headerBackButton": "${payload.normalText.headerBackButton}",
+                        "headerBackButtonCommand": "${payload.normalText.headerBackButtonCommand}"
+                    },
+                    {
+                        "type": "Container",
+                        "width": "100%",
+                        "height": "${@viewportProfile == @hubLandscapeSmall ? '66%' : '73%'}",
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "items": [
+                            {
+                                "type": "ScrollView",
+                                "width": "80%",
+                                "height": "70%",
+                                "item": [
+                                    {
+                                        "type": "Text",
+                                        "id": "Narrative",
+                                        "text": "${payload.normalText.text}",
+                                        "speech": "${payload.normalText.properties.textToSpeech}",
+                                        "textAlignVertical": "center",
+                                        "fontSize": "5vw",
+                                        "style": "karaokeText"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "Container",
+                        "when": "${@viewportProfile != @hubRoundSmall}",
+                        "width": "100%",
+                        "height": "12%",
+                        "paddingLeft": "2vw",
+                        "paddingRight": "2vw",
+                        "direction": "row",
+                        "items": [
+                            {
+                                "type": "Text",
+                                "width": "75%",
+                                "text": "${payload.normalText.hintText}",
+                                "fontWeight": "300",
+                                "fontSize": "3vw",
+                                "textAlign": "left",
+                                "textAlignVertical": "auto"
+                            },
+                            {
+                                "type": "Text",
+                                "alignSelf": "end",
+                                "grow": 1,
+                                "text": "${payload.normalText.developedByText}",
+                                "fontSize": "2vw",
+                                "textAlignVertical": "bottom"
+                            },
+                            {
+                                "type": "Image",
+                                "height": "100%",
+                                "source": "${payload.normalText.developedByUrl}",
+                                "align": "bottom",
+                                "scale": "best-fit",
+                                "grow": 1
+                            }
+                        ],
+                        "alignItems": "center",
+                        "justifyContent": "spaceEvenly"
+                    }
+                ],
+                "alignItems": "stretch",
+                "justifyContent": "start"
+            }
+        ]
+    }
+}

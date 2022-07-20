@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "hindu temple",
+            "invocationName": "greater north fulton",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -49,6 +49,54 @@
                     ]
                 },
                 {
+                    "name": "MembershipIntent",
+                    "slots": [],
+                    "samples": [
+                        "Membership",
+                        "members"
+                    ]
+                },
+                {
+                    "name": "EventsIntent",
+                    "slots": [
+                        {
+                            "name": "eventName",
+                            "type": "eventName"
+                        }
+                    ],
+                    "samples": [
+                        "Events"
+                    ]
+                },
+                {
+                    "name": "BusinessDevelopmentIntent",
+                    "slots": [],
+                    "samples": [
+                        "Business Development"
+                    ]
+                },
+                {
+                    "name": "MembershipLevelsIntent",
+                    "slots": [],
+                    "samples": [
+                        "Membership Levels"
+                    ]
+                },
+                {
+                    "name": "MemberBenefitsIntent",
+                    "slots": [],
+                    "samples": [
+                        "Member Benefits"
+                    ]
+                },
+                {
+                    "name": "MemberDirectoryIntent",
+                    "slots": [],
+                    "samples": [
+                        "Member Directory"
+                    ]
+                },
+                {
                     "name": "OrdinalIntent",
                     "slots": [
                         {
@@ -75,309 +123,26 @@
                         "main menu",
                         "show main menu"
                     ]
-                },
-                {
-                    "name": "VahanaSevaIntent",
-                    "slots": [],
-                    "samples": [
-                        "vahana seva",
-                        "tell about vahana seva",
-                        "what is vahana seva"
-                    ]
-                },
-                {
-                    "name": "ThisMonthEventsIntent",
-                    "slots": [
-                        {
-                            "name": "month",
-                            "type": "AMAZON.Month"
-                        },
-                        {
-                            "name": "date_ordinal",
-                            "type": "AMAZON.Ordinal"
-                        },
-                        {
-                            "name": "date_number",
-                            "type": "AMAZON.NUMBER"
-                        }
-                    ],
-                    "samples": [
-                        "this month events",
-                        "month events",
-                        "current month events",
-                        "{month} {date_number}",
-                        "{month} {date_ordinal}",
-                        "{month}",
-                        "on {date_ordinal}",
-                        "on {date_number}",
-                        "what is on the {date_number}",
-                        "show me the event on {date_number}",
-                        "show me the information for {date_number}",
-                        "take me to the event that is taking place on the {date_number}",
-                        "what is the event on {date_number} about",
-                        "what event is taking place on {month} {date_ordinal}",
-                        "what event is on {month} {date_ordinal}",
-                        "what event is on {date_ordinal}",
-                        "what is the event on {date_ordinal} about",
-                        "take me to the event that is taking place on the {date_ordinal}"
-                    ]
-                },
-                {
-                    "name": "SpecialEventsIntent",
-                    "slots": [],
-                    "samples": [
-                        "special events",
-                        "what are special events"
-                    ]
-                },
-                {
-                    "name": "SundayActivitiesIntent",
-                    "slots": [],
-                    "samples": [
-                        "sunday activities",
-                        "what are sunday activities"
-                    ]
-                },
-                {
-                    "name": "ActivityInfoIntent",
-                    "slots": [
-                        {
-                            "name": "activityName",
-                            "type": "activityName"
-                        }
-                    ],
-                    "samples": [
-                        "tell me more about {activityName}",
-                        "show me more about {activityName}",
-                        "{activityName}",
-                        "tell about {activityName}",
-                        "what is {activityName}",
-                        "choose {activityName}",
-                        "select {activityName}"
-                    ]
-                },
-                {
-                    "name": "PoojaMaterialsIntent",
-                    "slots": [],
-                    "samples": [
-                        "pooja materials",
-                        "show me pooja materials"
-                    ]
-                },
-                {
-                    "name": "FacilityRentalIntent",
-                    "slots": [],
-                    "samples": [
-                        "facility rental",
-                        "facilities",
-                        "what facilities you are offering",
-                        "show me facilities",
-                        "what kind of facilities are there"
-                    ]
-                },
-                {
-                    "name": "FacilityRentalInfoIntent",
-                    "slots": [
-                        {
-                            "name": "facilityName",
-                            "type": "facilityName"
-                        }
-                    ],
-                    "samples": [
-                        "tell me more about {facilityName}",
-                        "show me more about {facilityName}",
-                        "{facilityName}",
-                        "what is {facilityName}",
-                        "choose {facilityName}",
-                        "select {facilityName}"
-                    ]
-                },
-                {
-                    "name": "DonationIntent",
-                    "slots": [],
-                    "samples": [
-                        "donate",
-                        "donation",
-                        "how to donate",
-                        "how can i donate to you",
-                        "what are the donations",
-                        "types of donations",
-                        "how to donate",
-                        "sponsors",
-                        "show sponsorship options",
-                        "show me donations"
-                    ]
-                },
-                {
-                    "name": "AboutUsIntent",
-                    "slots": [],
-                    "samples": [
-                        "show about us",
-                        "open about us",
-                        "can you tell about you",
-                        "about us",
-                        "tell about us"
-                    ]
-                },
-                {
-                    "name": "DeitiesIntent",
-                    "slots": [],
-                    "samples": [
-                        "deities",
-                        "how many deities there",
-                        "tell about deitites",
-                        "who are thre in the temple",
-                        "which gods are there in the temple"
-                    ]
-                },
-                {
-                    "name": "CommitteeIntent",
-                    "slots": [],
-                    "samples": [
-                        "committee",
-                        "what are the committes there",
-                        "tell about your trustess",
-                        "trusts",
-                        "what committe you are maintaining"
-                    ]
-                },
-                {
-                    "name": "PriestsIntent",
-                    "slots": [],
-                    "samples": [
-                        "tell about priest",
-                        "how many priest there",
-                        "who is chief priest",
-                        "show priest",
-                        "priest",
-                        "priests"
-                    ]
                 }
             ],
             "types": [
                 {
-                    "name": "activityName",
+                    "name": "eventName",
                     "values": [
                         {
                             "name": {
-                                "value": "balaviharRegistration",
+                                "value": "chamber",
                                 "synonyms": [
-                                    "bala vihar registration",
-                                    "Bala vihar"
+                                    "chamber",
+                                    "chamber events"
                                 ]
                             }
                         },
                         {
                             "name": {
-                                "value": "balaviharRegistrationStudent",
+                                "value": "member",
                                 "synonyms": [
-                                    "Returning student",
-                                    "new sibling",
-                                    "Bala vihar Registration Returning student new sibling"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "balaviharAnnualDay",
-                                "synonyms": [
-                                    "Bala vihar Annual day",
-                                    "Annual day"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "balaviharDonations",
-                                "synonyms": [
-                                    "Bala vihar Donations Books and CDs",
-                                    "Bala vihar Donations",
-                                    "Bala vihar Books and CDs"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "languageClasses",
-                                "synonyms": [
-                                    "Language Classes"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "yogaClass",
-                                "synonyms": [
-                                    "Yoga Class",
-                                    "yoga classes"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "danceClasses",
-                                "synonyms": [
-                                    "Dance Classes",
-                                    "Kuchipudi"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "musicInstrument",
-                                "synonyms": [
-                                    "Music Instrument",
-                                    "Music Classes"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "summerTutoring",
-                                "synonyms": [
-                                    "Summer Tutoring",
-                                    "Summer Classes"
-                                ]
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "facilityName",
-                    "values": [
-                        {
-                            "name": {
-                                "value": "mahathiAuditorium",
-                                "synonyms": [
-                                    "mahathi auditorium",
-                                    "mahathi"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "akshayaHall",
-                                "synonyms": [
-                                    "akshaya hall",
-                                    "akshay hall",
-                                    "akshaya"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "nityaKalyani",
-                                "synonyms": [
-                                    "nitya kalyani",
-                                    "nithya kalyani"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "yagashala",
-                                "synonyms": [
-                                    "yagashala"
+                                    "member events"
                                 ]
                             }
                         }

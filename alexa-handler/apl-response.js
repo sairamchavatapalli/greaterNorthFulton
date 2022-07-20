@@ -5,6 +5,8 @@ const bodyTemplate = require('./templates/body-template.json');
 const listImgHorTemplate = require('./templates/list-img-horizontal.json')
 const gridTemplate = require('./templates/grid-template.json');
 const videoTemplate = require('./templates/video-template.json');
+const memberBenefitTemplate = require('./templates/member-benefit.json');
+const membershipLevelTemplate = require('./templates/membership-level.json');
 
 const { generatePageDs } = require('./data-sources/page-temp-ds');
 const { generateTextDs } = require('./data-sources/text-temp-ds');
@@ -13,6 +15,9 @@ const { generateListDs } = require('./data-sources/list-temp-ds');
 const { generateListImgHoriDs } = require('./data-sources/list-img-hor-temp-ds');
 const { generateGridDs } = require('./data-sources/grid-temp-ds');
 const { generateVideoDs } = require('./data-sources/video-temp-ds');
+const { memberBenefitDs } = require('./data-sources/member-benefit-ds');
+const { membershipLevelDs } = require('./data-sources/membership-level-ds');
+
 
 const buildPageRes = (responseBuilder, data, token = "launchToken") => {
     responseBuilder.addDirective({
@@ -21,6 +26,26 @@ const buildPageRes = (responseBuilder, data, token = "launchToken") => {
         token: token,
         document: pageTemplate,
         datasources: generatePageDs(data)
+    })
+}
+
+const buildMemberBenefitRes = (responseBuilder, data, token = "memberBenefit") => {
+    responseBuilder.addDirective({
+        type: 'Alexa.Presentation.APL.RenderDocument',
+        version: '1.6',
+        token: token,
+        document: memberBenefitTemplate,
+        datasources: memberBenefitDs(data)
+    })
+}
+
+const buildMembershipLevelRes = (responseBuilder, data, token = "membershipLevel") => {
+    responseBuilder.addDirective({
+        type: 'Alexa.Presentation.APL.RenderDocument',
+        version: '1.6',
+        token: token,
+        document: membershipLevelTemplate,
+        datasources: membershipLevelDs(data)
     })
 }
 
@@ -126,5 +151,5 @@ const buildVideoRes = (responseBuilder, data, token = "videoplayer") => {
 
 
 module.exports = {
-    buildBodyRes, buildListRes, buildPageRes, buildTextRes, buildGridRes, buildVideoRes, buildListImgHorRes
+    buildBodyRes, buildMemberBenefitRes, buildMembershipLevelRes, buildListRes, buildPageRes, buildTextRes, buildGridRes, buildVideoRes, buildListImgHorRes
 }

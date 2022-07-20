@@ -1,6 +1,148 @@
 {
   "CONTEXTS": {
-    "SHOW_MENU": "show-menu"
+    "SHOW_MENU": "show-menu",
+    "MENU_ITEM": "menu-item",
+    "MEMBER_BENEFIT": "member-benefit",
+    "MEMBERSHIP_LEVEL": "membership-level"
   },
-  "DATA": {}
+  "DATA": {
+    "MENU_DATA": {
+      "title": "MAIN MENU",
+      "list": [
+        {
+          "name": "Membership",
+          "id": "membership"
+        },
+        {
+          "name": "Events",
+          "id": "events"
+        },
+        {
+          "name": "Business development",
+          "id": "businessDevelopment"
+        },
+        {
+          "name": "About the chamber",
+          "id": "aboutTheChamber"
+        }
+      ]
+    },
+    "MEMBERSHIP": {
+      "title": "MEMBERSHIP OPTIONS",
+      "list": [
+        {
+          "name": "Membership Levels",
+          "id": "membershipLevels"
+        },
+        {
+          "name": "Member Benefits",
+          "id": "memberBenefits"
+        },
+        {
+          "name": "Member Directory",
+          "id": "memberDirectory"
+        }
+      ]
+    },
+    "MEMBER_BENEFIT": {
+      "title": "MEMBER BENEFIT",
+      "list": [
+        {
+          "headline": "",
+          "items": [
+            {
+              "name": "Marketing opportunities for your business/organization to gain exposure"
+            },
+            {
+              "name": "Sponsorship sponsor a GNFCC event/program"
+            },
+            {
+              "name": "Chamber Marketing Opportunities GNFCC.com, Chamberlink Weekly email blast to members, Online Directory"
+            },
+            {
+              "name": "All employees are members of GNFCC for participation in Chamber events, services and resources"
+            },
+            {
+              "name": "Access to the most effective networking/referral program in North Fulton"
+            },
+            {
+              "name": "Complimentary admission to Monthly Business After HoursChamber101 New Member orientation to help you take full advantage of Chamber benefits"
+            },
+            {
+              "name": "Special “member” pricing at Chamber events and programs"
+            },
+            {
+              "name": "Membership cling to display at your business"
+            },
+            {
+              "name": "Complimentary Membership with the Georgia Chamber and U.S. Chamber Federation (businesses with 20 or less employees)"
+            },
+            {
+              "name": "Member Discounts available Constant Contact Partner Program Anthem SMART Health Insurance"
+            },
+            {
+              "name": "Member Landing Page update business info, add new contacts, manage membership"
+            },
+            {
+              "name": "Community Calendar and Member Deals post your special events, workshops, important dates"
+            },
+            {
+              "name": "Job Posts opportunity to find qualified employees"
+            },
+            {
+              "name": "Enhanced Business Directory add video, images, keywords, Google map to your listing"
+            },
+            {
+              "name": "Hi-tech conference/meeting space available"
+            },
+            {
+              "name": "Advocacy on behalf of your business at the local, state and federal levels"
+            },
+            {
+              "name": "Certificates of Origin Provided"
+            },
+            {
+              "name": "Opportunity to join a Member2Member Business Round Table"
+            }
+          ]
+        }
+      ]
+    },
+    "MEMBERSHIP_LEVELS": {
+      "title": "MEMBERSHIP LEVELS",
+      "list": [
+        {
+          "headline": "Partner",
+          "items": [
+            {
+              "name": "1-5 Employees $395"
+            },
+            {
+              "name": "6-20 Employees $495"
+            },
+            {
+              "name": "21-59 Employees $625"
+            },
+            {
+              "name": "60-99 Employees $1000"
+            },
+            {
+              "name": "100+ Employees and/or Multiple Locations: $2500"
+            }
+          ]
+        },
+        {
+          "headline": "Chairman's Circle",
+          "items": [
+            {
+              "name": "$5,000 per year"
+            },
+            {
+              "name": "Chairman's Circle is a distinct group of CEOs and high-level Executives representing major companies, business segments and investors in the Metro Atlanta area."
+            }
+          ]
+        }
+      ]
+    }
+  }
 }

@@ -1,7 +1,7 @@
 const GC = require('../constants.json');
 const aplResponse = require('../apl-response')
 
-const MemberShipHandler = (handlerInput) => {
+const AboutChamberHandler = (handlerInput) => {
     const { responseBuilder, attributesManager } = handlerInput;
 
     let sessionAttributes = attributesManager.getSessionAttributes();
@@ -10,13 +10,13 @@ const MemberShipHandler = (handlerInput) => {
     let speechText = `Well, we have <break time = '0.15s'/>`;
     let repromptText = ' Choose one to know more.'
 
-    let memberShipData = GC.DATA.MEMBERSHIP
+    let aboutChamberData = GC.DATA.ABOUT_CHAMBER
 
-    let length = memberShipData.list.length
+    let length = aboutChamberData.list.length
 
     let listItems = []
 
-    memberShipData.list.forEach((item, i) => {
+    aboutChamberData.list.forEach((item, i) => {
         if (i === length - 1) speechText += `and ${item.name}.`;
         else speechText += `${item.name}, `;
 
@@ -35,8 +35,8 @@ const MemberShipHandler = (handlerInput) => {
     if (handlerInput.hasAplSupport) {
 
         let data = {
-            title: memberShipData.title,
-            hintText: memberShipData.list[0].name,
+            title: aboutChamberData.title,
+            hintText: aboutChamberData.list[0].name,
             backgroundImage: "https://hindoo.s3.amazonaws.com/images/background-plain2.jpg",
             listItems,
             count: listItems.length,
@@ -47,7 +47,7 @@ const MemberShipHandler = (handlerInput) => {
     }
     else speechText += repromptText
 
-    contexts.unshift(GC.CONTEXTS.MEMBERSHIP);
+    contexts.unshift(GC.CONTEXTS.ABOUT_CHAMBER);
 
     sessionAttributes.contexts = contexts
     sessionAttributes.repeatSpeech = speechText
@@ -62,5 +62,5 @@ const MemberShipHandler = (handlerInput) => {
 }
 
 module.exports = {
-    MemberShipHandler
+    AboutChamberHandler
 }

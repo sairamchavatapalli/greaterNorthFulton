@@ -4,9 +4,13 @@ const { NoHandler } = require('./no-handler');
 const { MemberShipHandler } = require('./membership');
 const { MemberBenefitsHandler } = require('./member-benefits');
 const { MembershipLevelHandler } = require('./membership-level');
+const { BusinessDevelopmentHandler } = require('./business-development');
+const { AboutChamberHandler } = require('./about-chamber');
+const { PartnersHandler, displayPartnerInfo, displayPartnersHandler } = require('./partners')
 
 
 
 module.exports = {
-    LaunchHandler, MainMenuHandler, NoHandler, MemberBenefitsHandler, MemberShipHandler, MembershipLevelHandler
+    LaunchHandler, BusinessDevelopmentHandler, MainMenuHandler, NoHandler, MemberBenefitsHandler, MemberShipHandler, MembershipLevelHandler
+    , AboutChamberHandler, PartnersHandler, displayPartnerInfo, displayPartnersHandler
 }

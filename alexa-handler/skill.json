@@ -40,6 +40,7 @@
                     "slots": [],
                     "samples": [
                         "go back",
+                        "back",
                         "back to previous intent",
                         "previous intent",
                         "back to previous screen",
@@ -73,6 +74,35 @@
                     "slots": [],
                     "samples": [
                         "Business Development"
+                    ]
+                },
+                {
+                    "name": "PartnersIntent",
+                    "slots": [
+                        {
+                            "name": "partnerName",
+                            "type": "partnerName"
+                        }
+                    ],
+                    "samples": [
+                        "partners",
+                        "chamber partner",
+                        "{partnerName}",
+                        "tell about {partnerName}"
+                    ]
+                },
+                {
+                    "name": "OurMissionIntent",
+                    "slots": [],
+                    "samples": [
+                        "our mission"
+                    ]
+                },
+                {
+                    "name": "AwardsIntent",
+                    "slots": [],
+                    "samples": [
+                        "Awards"
                     ]
                 },
                 {
@@ -123,6 +153,16 @@
                         "main menu",
                         "show main menu"
                     ]
+                },
+                {
+                    "name": "AboutChamberIntent",
+                    "slots": [],
+                    "samples": [
+                        "about the chamber",
+                        "tell about chamber",
+                        "describe about chamber",
+                        "what is chamber"
+                    ]
                 }
             ],
             "types": [
@@ -143,6 +183,74 @@
                                 "value": "member",
                                 "synonyms": [
                                     "member events"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "partnerName",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "umallBusinessAdministration",
+                                "synonyms": [
+                                    "The U.S. Small Business Administration",
+                                    "Small Business Administration",
+                                    "The U.S. Small Business"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sbdc",
+                                "synonyms": [
+                                    "sbdc",
+                                    "s.d.b.c",
+                                    "Small Business Development Center"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "score",
+                                "synonyms": [
+                                    "score"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "regionalBusinessCoalition",
+                                "synonyms": [
+                                    "regional business coalition",
+                                    "regional business"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "rumcJobNetworking",
+                                "synonyms": [
+                                    "rumc job networking",
+                                    "rumc job"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "georgiaHispanicChamber",
+                                "synonyms": [
+                                    "georgia Hispanic Chamber",
+                                    "georgia hispanic"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "goBeyondProfit",
+                                "synonyms": [
+                                    "go beyond profit"
                                 ]
                             }
                         }

@@ -23,26 +23,27 @@ const TouchHandler = (handlerInput) => {
     else if (contexts.length > 0) {
         let curContext = contexts[0];
         if (curContext === GC.CONTEXTS.MENU_ITEM) {
-            if (argument === "vahanaSeva") return intents.VahanaSevaHandler(handlerInput)
-            else if (argument === "thisMonthEvents") return intents.askForDate(handlerInput)
-            else if (argument === "specialEvents") return intents.SpecialEventsHandler(handlerInput)
-            else if (argument === "sundayActivities") return intents.SundayActivitiesHandler(handlerInput)
-            else if (argument === "poojaMaterials") return intents.PoojMaterialsHandler(handlerInput)
-            else if (argument === "facilityRental") return intents.FacilityRentalHandler(handlerInput)
-            else if (argument === "donation") return intents.DonationHandler(handlerInput)
-            else if (argument === "aboutUs") return intents.AboutUsHandler(handlerInput)
+            if (argument === "membership") return intents.MemberShipHandler(handlerInput)
+            else if (argument === "events") return intents.MemberShipHandler(handlerInput)
+            else if (argument === "businessDevelopment") return intents.MemberShipHandler(handlerInput)
+            else if (argument === "aboutTheChamber") return intents.AboutChamberHandler(handlerInput)
+
         }
-        else if (curContext === GC.CONTEXTS.SUNDAY_ACTIVITIES) {
-            return intents.displayActivityInfo(handlerInput, argument)
+        else if (curContext === GC.CONTEXTS.MEMBERSHIP) {
+            if (argument === "membershipLevels") return intents.MembershipLevelHandler(handlerInput)
+            else if (argument === "memberBenefits") return intents.MemberBenefitsHandler(handlerInput)
+            else if (argument === "memberDirectory") return intents.MemberShipHandler(handlerInput)
         }
-        else if (curContext === GC.CONTEXTS.FACILITY_RENTAL) {
-            return intents.displayRentalInfo(handlerInput, argument)
+        else if (curContext === GC.CONTEXTS.ABOUT_CHAMBER) {
+            if (argument === "partners") return intents.displayPartnersHandler(handlerInput)
+            else if (argument === "ourMission") return intents.displayPartnersHandler(handlerInput)
+            else if (argument === "committtes") return intents.MemberShipHandler(handlerInput)
+            else if (argument === "awards") return intents.MemberShipHandler(handlerInput)
         }
-        else if (curContext === GC.CONTEXTS.ABOUT_US) {
-            if (argument === "deities") return intents.DeitiesHandler(handlerInput)
-            else if (argument === "committee") return intents.CommitteHandler(handlerInput)
-            else if (argument === "priests") return intents.PriestHandler(handlerInput)
+        else if (curContext === GC.CONTEXTS.PARTNERS) {
+            return intents.displayPartnerInfo(handlerInput, argument)
         }
+
     }
 
     return responseBuilder

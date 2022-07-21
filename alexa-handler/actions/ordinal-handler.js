@@ -4,7 +4,9 @@ const GC = require('../constants.json');
 const menuOrdinal = (handlerInput, number) => {
   const { responseBuilder } = handlerInput;
   let speechText = `Sorry, invalid option. Please choose valid option or say "help" for help`
-  if (number === 0) return intents.member(handlerInput)
+  if (number === 0) return intents.MemberShipHandler(handlerInput)
+  else if (number === 2) return intents.BusinessDevelopmentHandler(handlerInput)
+  else if (number === 3) return intents.AboutChamberHandler(handlerInput)
 
   return responseBuilder
     .speak(speechText)
@@ -12,10 +14,10 @@ const menuOrdinal = (handlerInput, number) => {
     .getResponse();
 }
 
-const aboutUsOrdinal = (handlerInput, number) => {
+const aboutChamberOrdinal = (handlerInput, number) => {
   const { responseBuilder } = handlerInput;
   let speechText = `Sorry, invalid option. Please choose valid option or say "help" for help`
-  if (number === 0) return intents.DeitiesHandler(handlerInput)
+  if (number === 0) return intents.PartnersHandler(handlerInput)
 
 
   return responseBuilder
@@ -24,26 +26,12 @@ const aboutUsOrdinal = (handlerInput, number) => {
     .getResponse();
 }
 
-const activityOrdinal = (handlerInput, number) => {
+const membershipOrdinal = (handlerInput, number) => {
   const { responseBuilder } = handlerInput;
-  let speechText = `Sorry, invalid option. Please choose valid option or say "help" for help`;
-  let activityList = GC.DATA.SUNDAY_ACTIVITIES.list
-
-  let activity = activityList[number];
-  if (activity) return intents.displayActivityInfo(handlerInput, activity.id)
-
-  return responseBuilder
-    .speak(speechText)
-    .reprompt(speechText)
-    .getResponse();
-}
-const facilityOrdinal = (handlerInput, number) => {
-  const { responseBuilder } = handlerInput;
-  let speechText = `Sorry, invalid option. Please choose valid option or say "help" for help`;
-  let facilityList = GC.DATA.FACILITY_RENTAL.list
-
-  let facility = facilityList[number];
-  if (facility) return intents.displayRentalInfo(handlerInput, facility.id)
+  let speechText = `Sorry, invalid option. Please choose valid option or say "help" for help`
+  if (number === 0) return intents.MembershipLevelHandler(handlerInput)
+  else if (number === 1) return intents.MemberBenefitsHandler(handlerInput)
+  if (number === 2) return intents.MembershipLevelHandler(handlerInput)
 
   return responseBuilder
     .speak(speechText)
@@ -64,10 +52,8 @@ const OrdinalHandler = (handlerInput) => {
     let indexVal = Number(number) - 1;
     let curContext = contexts[0];
     if (curContext === GC.CONTEXTS.MENU_ITEM) return menuOrdinal(handlerInput, indexVal);
-    else if (curContext === GC.CONTEXTS.ABOUT_US) return aboutUsOrdinal(handlerInput, indexVal);
-    else if (curContext === GC.CONTEXTS.SUNDAY_ACTIVITIES) return activityOrdinal(handlerInput, indexVal);
-    else if (curContext === GC.CONTEXTS.FACILITY_RENTAL) return facilityOrdinal(handlerInput, indexVal);
-
+    else if (curContext === GC.CONTEXTS.ABOUT_CHAMBER) return aboutChamberOrdinal(handlerInput, indexVal);
+    else if (curContext === GC.CONTEXTS.MEMBERSHIP) return membershipOrdinal(handlerInput, indexVal);
   }
 
   return responseBuilder

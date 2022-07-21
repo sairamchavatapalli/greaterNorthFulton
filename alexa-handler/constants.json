@@ -2,8 +2,12 @@
   "CONTEXTS": {
     "SHOW_MENU": "show-menu",
     "MENU_ITEM": "menu-item",
+    "MEMBERSHIP": "membership",
     "MEMBER_BENEFIT": "member-benefit",
-    "MEMBERSHIP_LEVEL": "membership-level"
+    "MEMBERSHIP_LEVEL": "membership-level",
+    "ABOUT_CHAMBER": "about-chamber",
+    "PARTNERS": "partners",
+    "PARTNER_INFO": "partner-info"
   },
   "DATA": {
     "MENU_DATA": {
@@ -141,6 +145,81 @@
               "name": "Chairman's Circle is a distinct group of CEOs and high-level Executives representing major companies, business segments and investors in the Metro Atlanta area."
             }
           ]
+        }
+      ]
+    },
+    "ABOUT_CHAMBER": {
+      "title": "About the chamber",
+      "list": [
+        {
+          "name": "Partners",
+          "id": "partners"
+        },
+        {
+          "name": "Our Mission",
+          "id": "ourMission"
+        },
+        {
+          "name": "Committtes",
+          "id": "committtes"
+        },
+        {
+          "name": "Awards",
+          "id": "awards"
+        }
+      ]
+    },
+    "PARTNERS": {
+      "title": "PARTNERS",
+      "list": [
+        {
+          "name": "The U.S. Small Business Administration",
+          "id": "umallBusinessAdministration",
+          "imageUrl": "https://greaternorthfulton.s3.amazonaws.com/sba.png",
+          "htmlText": "The U.S. Small Business Administration is offering low-interest federal disaster loans for working capital to Georgia small businesses suffering substantial economic injury as a result of the Coronavirus (COVID-19). These loans can provide vital economic support to help small businesses overcome the temporary loss of revenue they are experiencing.",
+          "ssmlText": "The U.S. Small Business Administration is offering low interest federal disaster loans for working capital to Georgia small businesses suffering substantial economic injury as a result of the Coronavirus (COVID 19). These loans can provide vital economic support to help small businesses overcome the temporary loss of revenue they are experiencing."
+        },
+        {
+          "name": "SBDC",
+          "id": "sbdc",
+          "imageUrl": "https://greaternorthfulton.s3.amazonaws.com/sbdc.png",
+          "htmlText": "The Small Business Development Center (SBDC) provides free, confidential consulting to member businesses on a variety of subjects including business plans, marketing strategies, financial analysis, management structure, access to capital, social media, and much more.",
+          "ssmlText": "The Small Business Development Center (SBDC) provides free, confidential consulting to member businesses on a variety of subjects including business plans, marketing strategies, financial analysis, management structure, access to capital, social media, and much more."
+        },
+        {
+          "name": "SCORE",
+          "id": "score",
+          "imageUrl": "https://greaternorthfulton.s3.amazonaws.com/score.jpg",
+          "htmlText": "Using a large network of highly successful and experienced business professionals and entrepreneurs as mentors, SCORE provides free confidential business advice through face-to-face meetings, providing advice on every aspect of business.",
+          "ssmlText": "Using a large network of highly successful and experienced business professionals and entrepreneurs as mentors, SCORE provides free confidential business advice through face to face meetings, providing advice on every aspect of business."
+        },
+        {
+          "name": "Regional Business Coalition (RBC)",
+          "id": "regionalBusinessCoalition",
+          "imageUrl": "https://greaternorthfulton.s3.amazonaws.com/rbc.png",
+          "htmlText": "The Regional Business Coalition of Metropolitan Atlanta (RBC) is an organization of 16 local Chambers of Commerce throughout the Metro Atlanta region. RBC member chambers represent over 10,000 businesses that collectively employ over 1 million metro Atlanta residents. <br><br>The RBC’s primary goal is to represent the interests of RBC chamber members on public policy issues impacting our transportation, water and air quality and to advocate for solutions that improve metro Atlanta’s quality of life and economic vitality",
+          "ssmlText": "The Regional Business Coalition of Metropolitan Atlanta (RBC) is an organization of 16 local Chambers of Commerce throughout the Metro Atlanta region. RBC member chambers represent over 10,000 businesses that collectively employ over 1 million metro Atlanta residents.The RBCs primary goal is to represent the interests of RBC chamber members on public policy issues impacting our transportation, water and air quality and to advocate for solutions that improve metro Atlantas quality of life and economic vitality"
+        },
+        {
+          "name": "RUMC Job Networking",
+          "id": "rumcJobNetworking",
+          "imageUrl": "https://greaternorthfulton.s3.amazonaws.com/rumc.png",
+          "htmlText": "Roswell United Methodist Church provides employment workshops, mini job fairs and evening dinners with keynote speakers for those in need of employment or job readiness. RUMC Job Networking meets every 2nd and 4 th Monday of the month to connect employees with job opportunities in North Fulton.",
+          "ssmlText": "Roswell United Methodist Church provides employment workshops, mini job fairs and evening dinners with keynote speakers for those in need of employment or job readiness. RUMC Job Networking meets every 2nd and 4 th Monday of the month to connect employees with job opportunities in North Fulton."
+        },
+        {
+          "name": "Georgia Hispanic Chamber",
+          "id": "georgiaHispanicChamber",
+          "imageUrl": "https://greaternorthfulton.s3.amazonaws.com/georgiaHispanic.png",
+          "htmlText": "The Georgia Hispanic Chamber focus is to promote and support the domestic and international economic development of Hispanic businesses and individuals. Programs include business formation, business growth, and civic and leadership development and engagement. Professionals come together to network and share on the second Tuesday of the month at the GNFCC office.",
+          "ssmlText": "The Georgia Hispanic Chamber focus is to promote and support the domestic and international economic development of Hispanic businesses and individuals. Programs include business formation, business growth, and civic and leadership development and engagement. Professionals come together to network and share on the second Tuesday of the month at the GNFCC office."
+        },
+        {
+          "name": "goBeyond Profit",
+          "id": "goBeyondProfit",
+          "imageUrl": "https://greaternorthfulton.s3.amazonaws.com/goBeyondProfit.png",
+          "htmlText": "goBeyondProfit is a recognized statewide alliance of business leaders committed to corporate generosity and improving people’s lives. goBeyondProfit provides timely, data-driven insights, comparative analysis and peer interviews helping executives navigate the complexity in the marketplace and set strategy to care for their people, community and bottom-line.",
+          "ssmlText": "goBeyondProfit is a recognized statewide alliance of business leaders committed to corporate generosity and improving people’s lives. goBeyondProfit provides timely, data-driven insights, comparative analysis and peer interviews helping executives navigate the complexity in the marketplace and set strategy to care for their people, community and bottom line."
         }
       ]
     }

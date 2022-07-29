@@ -7,6 +7,7 @@ const gridTemplate = require('./templates/grid-template.json');
 const videoTemplate = require('./templates/video-template.json');
 const memberBenefitTemplate = require('./templates/member-benefit.json');
 const membershipLevelTemplate = require('./templates/membership-level.json');
+const contactInfoTemplate = require('./templates/contact-info-template.json');
 
 const { generatePageDs } = require('./data-sources/page-temp-ds');
 const { generateTextDs } = require('./data-sources/text-temp-ds');
@@ -17,6 +18,7 @@ const { generateGridDs } = require('./data-sources/grid-temp-ds');
 const { generateVideoDs } = require('./data-sources/video-temp-ds');
 const { memberBenefitDs } = require('./data-sources/member-benefit-ds');
 const { membershipLevelDs } = require('./data-sources/membership-level-ds');
+const { generateContactInfoDs } =  require('./data-sources/contact-info-temp-ds')
 
 
 const buildPageRes = (responseBuilder, data, token = "launchToken") => {
@@ -36,6 +38,16 @@ const buildMemberBenefitRes = (responseBuilder, data, token = "memberBenefit") =
         token: token,
         document: memberBenefitTemplate,
         datasources: memberBenefitDs(data)
+    })
+}
+
+const buildContactInfoRes = (responseBuilder, data, token = "launchToken") => {
+    responseBuilder.addDirective({
+        type: 'Alexa.Presentation.APL.RenderDocument',
+        version: '1.0',
+        token: token,
+        document: contactInfoTemplate,
+        datasources: generateContactInfoDs(data)
     })
 }
 
@@ -151,5 +163,5 @@ const buildVideoRes = (responseBuilder, data, token = "videoplayer") => {
 
 
 module.exports = {
-    buildBodyRes, buildMemberBenefitRes, buildMembershipLevelRes, buildListRes, buildPageRes, buildTextRes, buildGridRes, buildVideoRes, buildListImgHorRes
+    buildBodyRes, buildContactInfoRes, buildMemberBenefitRes, buildMembershipLevelRes, buildListRes, buildPageRes, buildTextRes, buildGridRes, buildVideoRes, buildListImgHorRes
 }
